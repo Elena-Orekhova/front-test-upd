@@ -60,7 +60,7 @@ export const Card: FC<CardProps> = ({ image, title, current }) => {
               <span className="card__price-value">{current}</span>
             </div>
           </div>
-          <button className="card__button">PLACE BID</button>
+          <button className="card__button">Place BID</button>
         </div>
       </div>
     </div>

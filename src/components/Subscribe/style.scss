@@ -2,44 +2,41 @@
 @import '../../styles/variables.scss';
 
 .subscribe {
-    padding: 80px 0 100px;
+    padding: 120px 0;
     background-color: $background-light;
 
     &__container {
-        max-width: 1280px;
+        max-width: 1246px;
         margin: 0 auto;
-        padding: 40px 30px;
+        padding: 31px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 60px;
         background-color: $background-dark;
-        border-radius: 32px;
-        overflow: hidden;
+        border-radius: 30px;
     }
 
     &__content {
-        flex: 1;
-        max-width: 560px;
-        padding-left: 20px;
+        padding-left: 35px;
     }
 
     &__title {
         font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 1.2;
-        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: 45px;
+        line-height: 48px;
+        letter-spacing: 1%;
+        margin-bottom: 20px;
         color: $white-color;
     }
 
     &__description {
-        font-family: 'Inter', sans-serif;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 1.6;
-        color: $text-light;
-        margin-bottom: 40px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+        color: $text-label-tertiary;
+        margin-bottom: 57px;
     }
 
     &__buttons {
@@ -51,33 +48,34 @@
         font-family: 'Inter', sans-serif;
         font-weight: 600;
         font-size: 16px;
-        padding: 16px 32px;
         border-radius: 12px;
-        cursor: pointer;
-        text-transform: uppercase;
 
         &--primary {
             color: $background-dark;
             background-color: $white-color;
             border: none;
+            padding: 20px 24px;
         }
 
         &--secondary {
             color: $white-color;
             background-color: transparent;
-            border: 1px solid $white-color;
+            border: 2px solid $white-color;
+            padding: 20px 29px;
         }
     }
 
     &__image {
         flex: 1;
-        max-width: 450px;
+        max-width: 369px;
+        max-height: 249px;
     }
 
     &__image-container {
         width: 100%;
+        height: 100%;
         overflow: hidden;
-        border-radius: 24px;
+        border-radius: 15.79px;
         position: relative;
 
         .subscribe__image-main {
@@ -85,17 +83,6 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-        }
-
-        .subscribe__image-decoration {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 120px;
-            height: auto;
-            filter: brightness(0) invert(1);
-            opacity: 0.7;
-            z-index: 2;
         }
     }
 }

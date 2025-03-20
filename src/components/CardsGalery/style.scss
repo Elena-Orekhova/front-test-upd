@@ -1,46 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .cards {
   max-width: 100%;
-  padding: 60px 0 80px;
-  background-color: $background-light;
+  padding: 70px 0;
+  background-color: $background-light-secondary;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 
   &__header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1246px;
     padding: 0 20px;
   }
 
   &__title {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 36px;
-    color: $text-tertiary;
+    font-size: 46px;
+    line-height: 48px;
+    color: $text-light;
   }
 
   &__scroll-wrapper {
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 0 20px;
     -webkit-tap-highlight-color: transparent;
     will-change: transform;
   }
 
   &__container {
     display: flex;
-    gap: 30px;
-    padding: 20px 0;
+    gap: 40px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -51,6 +49,8 @@
     -webkit-overflow-scrolling: touch;
     will-change: transform, scroll-position;
     scroll-snap-type: x mandatory;
+    margin-bottom: 70px;
+    padding: 0 20px;
 
     &::-webkit-scrollbar {
       display: none;
@@ -68,45 +68,66 @@
   }
 
   &__navigation {
+    box-shadow: 0px 43px 43px $shadow-color;
+    border-radius: 17.25px;
+    background-color: $background-secondary;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $background-light-seporator;
+      width: 2px;
+      height: 24px;
+      position: absolute;
+    }
   }
 
   &__arrow {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    border: 1px solid $border-color;
+    padding: 20px 28px;
+    border: none;
     background-color: $white-color;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 17.25px;
 
-    &--prev::before {
-      content: "";
-      display: block;
-      width: 20px;
-      height: 20px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23141416"%3E%3Cpath d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"%3E%3C/path%3E%3C/svg%3E');
+    img {
+      width: 24px;
+      height: 24px;
     }
 
-    &--next::before {
-      content: "";
-      display: block;
-      width: 20px;
-      height: 20px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23141416"%3E%3Cpath d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"%3E%3C/path%3E%3C/svg%3E');
+    &--prev {
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("/svg/svg_arrow-left.svg");
+      }
+    }
+
+    &--next {
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("/svg/svg_arrow-left.svg");
+        transform: rotate(180deg);
+      }
     }
   }
 }
 
 @media (max-width: 1440px) {
- 
 }

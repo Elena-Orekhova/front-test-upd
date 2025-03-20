@@ -1,26 +1,35 @@
 // Основные цвета
-$primary-color: #141416;
-$white-color: #FFFFFF;
+$primary-color: #141416; // черный
+$white-color: #FFFFFF; // белый
 $background-color: #F9F9F9;
 
 // Текстовые цвета
 $text-primary: #141416;
-$text-secondary: #64748B;
-$text-tertiary: #777E90;
-$text-light: #E6E8EC;
-$text-footer: #999999;
+$text-secondary: #606060;
+$text-tertiary: #676767;
+$text-label: #848586;
+$text-label-secondary: #94A3B8;
+$text-label-tertiary: #D4D4D4;
+$text-light: #C5C5C5;
+$text-footer: #B9B9B9;
+$text-footer-secondary: #999999;
 $text-active: #141416;
 
 // Цвета фонов
-$background-dark: #141416;
-$background-light: #F9F9F9;
-$background-semi-transparent: rgba(249, 249, 249, 0.95);
+$background-dark: #000000;
+$background-line: #201F1F;
+$background-light: #FFFFFF;
+$background-secondary: #FCFCFD;
+$background-light-secondary: #F1F1F1;
+$background-light-seporator: #E6E8EC;
+$background-semi-transparent: rgba(249, 249, 249, 0.95); // полупрозрачный белый
 $background-timer: #1C1D2059;
+$background-social: #535353;
 
 // Цвета границ
 $border-color: #E6E8EC;
-$divider-color: rgba(129, 129, 129, 0.25);
+$divider-color: #818181;
 
 // Цвета теней
-$shadow-color: rgba(0, 0, 0, 0.1);
+$shadow-color: rgba(129, 129, 129, 0.3);
 $card-shadow: rgba(22, 27, 45, 0.07);

@@ -8,7 +8,7 @@ export const Hero: FC = () => {
         <h1 className="hero__title">Discover And Create NFTs</h1>
         <p className="hero__subtitle">
           Discover, Create and Sell NFTs On Our NFT Marketplace With Over
-          Thousands Of NFTs And Get a $20 bonus.
+          Thousands Of NFTs And Get a <span className="hero__subtitle-bold">$20 bonus.</span>
         </p>
         <div className="hero__buttons">
           <button className="hero__button hero__button--primary">

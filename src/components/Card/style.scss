@@ -4,14 +4,11 @@
 .card {
     background-color: $white-color;
     border-radius: 24px;
-    overflow: hidden;
-    border: 1px solid $border-color;
-    box-shadow: 0px 25px 56px $card-shadow;
+    box-shadow: 38px 12px 60px $card-shadow;
     position: relative;
     z-index: 1;
-    min-width: 290px;
-    flex: 0 0 290px;
-    max-width: 290px;
+    min-width: 200px;
+    flex: 0 0 281px;
     user-select: none;
     scroll-snap-align: center;
     
@@ -20,14 +17,14 @@
         top: 28px;
         right: 25px;
         background-color: $background-timer;
-        padding: 5px 10px;
+        padding: 10px 0 10px 14px;
         z-index: 2;
         border-radius: 12px;
-        width: 115px;
+        width: 120px;
     }
 
     &__timer {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-weight: 500;
         font-size: 14px;
         color: $white-color;
@@ -35,10 +32,10 @@
     
     &__image-wrap {
         height: 253px;
-        width: 100%;
+        width: 253px;
         overflow: hidden;
         position: relative;
-        padding: 14px;
+        margin: 14px;
     }
 
     &__image {
@@ -49,25 +46,22 @@
     }
 
     &__content {
-        padding: 20px;
+        padding: 14px;
     }
 
     &__title {
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 22px;
         color: $text-primary;
-        margin-bottom: 15px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin-bottom: 20px;
+        line-height: 24px;
     }
 
     &__price-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
     }
 
     &__price-info {
@@ -76,11 +70,11 @@
     }
 
     &__price-label {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-weight: 400;
-        font-size: 16px;
-        color: $text-tertiary;
-        margin-bottom: 5px;
+        font-size: 14px;
+        color: $text-label-secondary;
+        margin-bottom: 3px;
     }
 
     &__price-vector-wrap {
@@ -89,36 +83,26 @@
     }
 
     &__price-vector {
-        width: 16px;
-        height: 16px;
-        margin: 0 4px;
+        width: 22px;
+        height: 22px;
     }
 
     &__price-value {
-        font-family: 'Inter', sans-serif;
-        font-weight: 600;
-        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 16.47px;
         color: $text-primary;
-        position: relative;
-        padding: 2px 4px;
-        border-radius: 4px;
-    }
-
-    &__footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     &__button {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 14.12px;
         color: $text-light;
         background-color: $primary-color;
         border: none;
         border-radius: 12px;
-        padding: 10px 18px;
-        cursor: pointer;
+        padding: 14.5px 24.5px;
+        text-transform: uppercase;
     }
 } 
