@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import '../../styles/variables.scss';
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 80px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &__content {
+        flex: 1;
+        max-width: 567px;
+    }
+
+    &__title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 1.3;
+        color: $text-primary;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+        animation-delay: 0.2s;
+    }
+
+    &__subtitle {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.6;
+        color: $text-secondary;
+        margin-bottom: 40px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+        animation-delay: 0.4s;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 32px;
+        margin-bottom: 60px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+        animation-delay: 0.6s;
+    }
+
+    &__button {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        border-radius: 16px;
+        padding: 18px 36px;
+        cursor: pointer;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+       
+        &--primary {
+            color: $white-color;
+            background-color: $primary-color;
+            border: none;
+        }
+
+        &--secondary {
+            color: $text-primary;
+            background-color: transparent;
+            border: 1px solid $primary-color;
+        }
+    }
+
+    &__banner {
+        flex: 1;
+        max-width: 780px;
+        position: relative;
+        opacity: 1;
+
+        &-wrapper {
+            position: relative;
+            width: 100%;
+            height: 540px;
+        }
+
+        &-main {
+            width: 391px;
+            height: 395px;
+            border-radius: 24px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 10px 20px $shadow-color;
+            opacity: 0;
+            animation: slideInFromRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            animation-delay: 0.2s;
+        }
+
+        &-small {
+            width: 320px;
+            height: 320px;
+            border-radius: 16px;
+            object-fit: cover;
+            position: absolute;
+            bottom: 40px;
+            right: -150px;
+            z-index: 2;
+            box-shadow: 0 10px 20px $shadow-color;
+            opacity: 0;
+            animation: slideInFromRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            animation-delay: 0.5s;
+        }
+
+        &-points {
+            position: absolute;
+            top: 0;
+            right: -170px;
+            z-index: 1;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 0.7s;
+        }
+
+        &-arrow {
+            position: absolute;
+            top: 20%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            opacity: 0;
+            animation: fadeInArrow 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+            animation-delay: 0.9s;
+        }
+    }
+}
+
+.stats {
+    display: flex;
+    gap: 80px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.8s;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__value {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 42px;
+        color: $text-primary;
+        margin-bottom: 5px;
+    }
+
+    &__label {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: $text-secondary;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInArrow {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
