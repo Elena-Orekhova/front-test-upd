@@ -1,5 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&display=swap');
-@import './styles/variables.scss';
+@use 'sass:math';
+@use './styles/variables' as *;
+@use './styles/animations' as *;
+@forward './styles/variables';
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
+}
 
 * {
   margin: 0;

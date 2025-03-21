@@ -6,8 +6,8 @@ export const Footer: FC = () => {
     <footer className="footer">
       <div className="footer__content">
         <div className="footer__main">
-          <div className="logo-footer">
-            <div className="logo-footer__icon">
+          <div className="footer__logo">
+            <div className="footer__logo-icon">
               <svg
                 width="53"
                 height="53"
@@ -29,7 +29,7 @@ export const Footer: FC = () => {
                 />
               </svg>
             </div>
-            <span className="logo-footer__text">DiveSea</span>
+            <span className="footer__logo-text">DiveSea</span>
           </div>
           <div className="footer__menu">
             <a href="#" className="footer__link">
