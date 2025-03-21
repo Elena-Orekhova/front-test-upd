@@ -1,15 +1,22 @@
 import { FC, useState, useEffect, useRef } from "react";
+import cl from "classnames";
+// TODO про модули не забываем
 import "./navigation.scss";
-
+import { Link } from "../Link/Link";
+// TODO - не нужно типизировать компонент, где это не нужно, если пропсов нет, мы его не типизируем
 export const Navigation: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+  // TODO не правлиьный тип - должен быть  HTMLDivElement | null
+  const menuRef = useRef<HTMLDivElement | null>(null);
   const burgerRef = useRef<HTMLButtonElement>(null);
 
+  // TODO - сделай просто position sticky, если элемент начал скролиться.
+  // Делаем хук отдельный const isScrool =  isScrolled() // true | false он вернет True, если у тебя глобальный скролл проскролился.
+  // И по этой переменной мы ставим position sticky а не fixed тогда все должно быть плавно, а не как сейчас
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 1); // В хуке поставь 1
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,20 +26,20 @@ export const Navigation: FC = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target as Node) &&
-        burgerRef.current &&
-        !burgerRef.current.contains(event.target as Node) &&
-        isMenuOpen
-      ) {
-        setIsMenuOpen(false);
-        document.body.style.overflow = "";
-      }
-    };
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target as Node) &&
+      burgerRef.current &&
+      !burgerRef.current.contains(event.target as Node) &&
+      isMenuOpen
+    ) {
+      setIsMenuOpen(false);
+      document.body.style.overflow = "";
+    }
+  };
 
+  useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -41,12 +48,15 @@ export const Navigation: FC = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    document.body.style.overflow = !isMenuOpen ? "hidden" : "";
+    document.body.style.overflow = !isMenuOpen ? "hidden" : ""; // Вот так вообще никогда не делай, это грубая ошибка, мы не можем изменять состояние на прямую )
   };
 
   return (
     <div
-      className={`navigation__container ${isScrolled ? "navigation__container--fixed" : ""}`}
+      className={cl(styles.navigation__container, {
+        __fixed: isScrolled,
+      })}
+      // Установи себе сюда либу classnames и используй ее, чтобы делать такие темы
     >
       <div className="navigation__wrapper">
         <nav className="navigation__navbar">
@@ -65,13 +75,11 @@ export const Navigation: FC = () => {
               <span></span>
               <span></span>
             </button>
+            {/* ВЫнеси в отдельнй компонент, сделай константы и замапь их */}
             <div className={`nav ${isMenuOpen ? "active" : ""}`} ref={menuRef}>
               <ul className="nav__list">
                 <li className="nav__item">
-                  <a
-                    href="#"
-                    className="nav__link"
-                  >
+                  <a href="#" className="nav__link">
                     Discover
                   </a>
                 </li>
@@ -86,18 +94,23 @@ export const Navigation: FC = () => {
                   </a>
                 </li>
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Stats
-                  </a>
+                 <Link/></>
                 </li>
               </ul>
-
+              {/* Контснтанты и мапим */}
               <div className="nav__social-links">
                 <a
                   href="#"
                   className="nav__social-link nav__social-link--instagram"
                   aria-label="Instagram"
                 ></a>
+                <Link
+                  href="#"
+                  className="nav__social-link"
+                  ariaLabel="Instagram"
+                  imageSrc="/svg/svg_instagram.svg"
+                  imageAlt="Instagram"
+                />
                 <a
                   href="#"
                   className="nav__social-link nav__social-link--linkedin"
@@ -114,7 +127,7 @@ export const Navigation: FC = () => {
                   aria-label="Twitter"
                 ></a>
               </div>
-
+              {/* Сделай компонент кнопки и потом используй, не надо каждый раз прокидывать стили так */}
               <button className="connect-wallet-btn">Connect Wallet</button>
             </div>
           </div>

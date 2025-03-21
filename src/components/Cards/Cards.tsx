@@ -4,28 +4,20 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Card } from "../Card/Card";
 import "./cards.scss";
 import { initialCardData } from "./const";
-import { ICard } from "./types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export const Cards: FC = () => {
-  const [cardData, setCardData] = useState<ICard[]>([]);
-
-  useEffect(() => {
-    const expanded = [...initialCardData, ...initialCardData, ...initialCardData];
-    setCardData(expanded);
-  }, []);
-
   return (
     <section className="cards">
       <div className="cards__header">
-        <h2 className="cards__title">Weekly - Top NFTs</h2>
+        <Text type="title">Weekly - Top NFTs</Text>
+      
       </div>
       <div className="cards__scroll-wrapper">
         <Swiper
           modules={[Navigation, Pagination]}
-          
           slidesPerView="auto"
           loop={true}
           centeredSlides={true}
@@ -35,7 +27,7 @@ export const Cards: FC = () => {
           }}
           className="cards__container"
         >
-          {cardData.map((card, index) => (
+          {initialCardData.map((card, index) => (
             <SwiperSlide
               key={`${card.id}-${index}`}
               className="cards__card-wrapper"
@@ -50,10 +42,10 @@ export const Cards: FC = () => {
         </Swiper>
       </div>
       <div className="cards__navigation">
-        <button
+        <Button
           className="cards__arrow cards__arrow--prev"
           aria-label="Предыдущий слайд"
-        ></button>
+        ></Button>
         <button
           className="cards__arrow cards__arrow--next"
           aria-label="Следующий слайд"

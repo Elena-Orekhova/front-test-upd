@@ -1,12 +1,13 @@
-import { FC } from "react";
 import { Hero } from "../Hero/Hero";
-import "./header.scss";
 import { Navigation } from "../Navigation/Navigation";
-
-export const Header: FC = () => {
+import styles from "./header.module.scss";
+// TODO `FC` - можно убрать, не обязательно
+// TODO Вместо обычных стилей использовать модули - в этом файле будет пример использования
+//- сделать так по всему проекту со стилями
+export const Header = () => {
   return (
-    <header className="header">
-      <div className="header__container">
+    <header className={styles.header}>
+      <div className={styles.header__container}>
         <Navigation />
         <Hero />
       </div>

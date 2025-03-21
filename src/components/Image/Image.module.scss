@@ -1,0 +1,15 @@
+.size-s {
+  width: 100%;
+  height: $image-size-s;
+  object-fit: cover;
+
+  @media (max-width: 1439px) {
+    height: $image-size-s-mobile;
+  }
+}
+
+.size-m {
+  width: 100%;
+  height: $image-size-m;
+  object-fit: cover;
+}
