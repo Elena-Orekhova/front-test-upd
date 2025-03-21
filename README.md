@@ -12,3 +12,7 @@
 ```bash
 npm run dev
 ```
+
+## Открыть в браузере
+
+https://boiling-parcel.surge.sh/
