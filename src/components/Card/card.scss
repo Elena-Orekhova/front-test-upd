@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+@import "../../styles/variables.scss";
+
+.card {
+  background-color: $white-color;
+  border-radius: 24px;
+  box-shadow: 38px 12px 60px $card-shadow;
+  position: relative;
+  z-index: 1;
+  min-width: 210px;
+  flex: 0 0 281px;
+
+  @media (max-width: 1439px) {
+    border-radius: 18px;
+    box-shadow: 29px 9px 45px $card-shadow;
+    flex: 0 0 210px;
+    width: 210px;
+  }
+
+  &__timer-wrap {
+    position: absolute;
+    top: 28px;
+    right: 25px;
+    background-color: $background-timer;
+    padding: 10px 0 10px 14px;
+    z-index: 2;
+    border-radius: 12px;
+    width: 120px;
+
+    @media (max-width: 1439px) {
+      top: 20px;
+      right: 20px;
+      padding: 0 0 4px 10px;
+      border-radius: 8px;
+      width: 90px;
+    }
+  }
+
+  &__timer {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-size: 14px;
+    color: $white-color;
+
+    @media (max-width: 1439px) {
+      font-size: 11px;
+    }
+  }
+
+  &__image-wrap {
+    height: 253px;
+    width: 253px;
+    overflow: hidden;
+    position: relative;
+    margin: 14px;
+    padding-top: 14px;
+
+    @media (max-width: 1439px) {
+      height: 190px;
+      width: 190px;
+      margin: 10px;
+      padding-top: 10px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+
+  &__content {
+    padding: 14px;
+
+    @media (max-width: 1439px) {
+      padding: 10px;
+    }
+  }
+
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: $text-primary;
+    margin-bottom: 20px;
+    line-height: 24px;
+
+    @media (max-width: 1439px) {
+      font-size: 16px;
+      margin-bottom: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price-label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $text-label-secondary;
+    margin-bottom: 3px;
+
+    @media (max-width: 1439px) {
+      font-size: 11px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__price-vector-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price-vector {
+    width: 22px;
+    height: 22px;
+
+    @media (max-width: 1439px) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__price-value {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16.47px;
+    color: $text-primary;
+
+    @media (max-width: 1439px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14.12px;
+    color: $white-color;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 12px;
+    padding: 14.5px 24.5px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+
+    @media (max-width: 1439px) {
+      font-size: 11px;
+      padding: 11px 18px;
+    }
+  }
+}

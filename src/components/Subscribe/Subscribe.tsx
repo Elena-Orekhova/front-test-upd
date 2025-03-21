@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./style.scss";
+import "./subscribe.scss";
 
 export const Subscribe: FC = () => {
   return (

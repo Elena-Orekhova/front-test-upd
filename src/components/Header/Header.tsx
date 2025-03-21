@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Hero } from "../Hero/Hero";
-import "./styles.scss";
+import "./header.scss";
 import { Navigation } from "../Navigation/Navigation";
 
 export const Header: FC = () => {

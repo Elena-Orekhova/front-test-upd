@@ -1,10 +1,15 @@
 import { FC } from "react";
-import "./style.scss";
+import "./hero.scss";
 
 export const Hero: FC = () => {
   return (
     <section className="hero">
       <div className="hero__content">
+        <div className="hero__content-mobile">
+          <p className="hero__content-mobile-text">
+            OVER 1M CREATORS
+          </p>
+        </div>
         <h1 className="hero__title">Discover And Create NFTs</h1>
         <p className="hero__subtitle">
           Discover, Create and Sell NFTs On Our NFT Marketplace With Over

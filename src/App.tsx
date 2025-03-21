@@ -1,5 +1,5 @@
 import { Header } from './components/Header/Header'
-import { CardsGalery } from './components/CardsGalery/CardsGalery'
+import { Cards } from './components/Cards/Cards'
 import { Subscribe } from './components/Subscribe/Subscribe'
 import { Footer } from './components/Footer/Footer'
 import './App.css'
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <CardsGalery />
+      <Cards />
       <Subscribe />
       <Footer />
     </>

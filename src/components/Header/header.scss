@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+@import "../../styles/variables.scss";
+
+.header {
+  background-color: $background-light;
+  padding-bottom: 170px;
+  width: 100%;
+  overflow: hidden;
+
+  @media (max-width: 1439px) {
+    padding-bottom: 114px;
+  }
+
+  @media (max-width: 1023px) {
+    padding-bottom: 119px;
+  }
+
+  &__container {
+    max-width: 1246px;
+    margin: 0 auto;
+
+    @media (max-width: 1439px) {
+      max-width: 100%;
+    }
+  }
+}

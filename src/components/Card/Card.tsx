@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from "react";
-import "./style.scss";
+import "./card.scss";
 
 interface CardProps {
   image: string;
